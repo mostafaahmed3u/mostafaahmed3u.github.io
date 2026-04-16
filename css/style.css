@@ -169,6 +169,42 @@ tr:hover {
     background: #233554;
 }
 
+/* Responsive Table */
+@media (max-width: 768px) {
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+        width: 100%;
+    }
+
+    thead {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        background: #112240;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+    td {
+        text-align: left;
+        padding: 10px;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #1c2b45;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #64ffda;
+        display: block;
+        margin-bottom: 5px;
+    }
+}
+
 /* Form */
 form {
     display: flex;
